@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "93f3ecd2-3408-4a65-aceb-67934e207249",
+		"name": "Apis Rest Eafit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hola Mundo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}",
+					"host": [
+						"{{server}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Despedida",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/despedida/jaime?frase=Sayonara",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"despedida",
+						"jaime"
+					],
+					"query": [
+						{
+							"key": "frase",
+							"value": "Sayonara"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudiante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/estudiantes/11234224",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"estudiantes",
+						"11234224"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/estudiantes",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Saludo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/saludo/diego?titulo=dev",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"saludo",
+						"diego"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "dev"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cedula\":2354656,\r\n  \"nombre\":\"Julian\",\r\n  \"apellido\":\"Parra\",\r\n  \"correo\":\"julian.parra@misena.edu.co\",\r\n  \"carrera\":\"Industrial\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/estudiantes",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cedula\":2354656,\r\n  \"nombre\":\"Julian\",\r\n  \"apellido\":\"Parra\",\r\n  \"correo\":\"julian.parra@misena.edu.co\",\r\n  \"carrera\":\"Industrial\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/estudiantes/11234224",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"estudiantes",
+						"11234224"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Estudiante Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cedula\":2354656\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/estudiantes/11234224",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"estudiantes",
+						"11234224"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "f309b273-d02c-4dfc-803e-a8a7d1244999",
+			"key": "server",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
